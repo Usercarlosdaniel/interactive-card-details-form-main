@@ -2,7 +2,8 @@
 // first section
 section:first-of-type {
   color: var(--neutral-100);
-  background: url("../../../assets/images/bg-main-mobile.png") no-repeat center;
+  background: black url("/src/assets/images/bg-main-mobile.png") no-repeat
+    center;
   background-size: cover;
   position: relative;
   width: 100vw;
@@ -10,7 +11,8 @@ section:first-of-type {
   padding-top: 20px;
 
   @include breakpoint(large) {
-    background: url(../../../assets/images/bg-main-desktop.png) no-repeat center;
+    background: black url("/src/assets/images/bg-main-desktop.png") no-repeat
+      center;
     background-size: cover;
     width: 40vw;
     min-height: 100vh;
@@ -19,7 +21,7 @@ section:first-of-type {
   > * {
     //style for all cards
     padding: 1rem 1.2rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 18rem;
     height: 10rem;
     position: absolute;
@@ -40,7 +42,7 @@ section:first-of-type {
     display: flex;
     justify-content: right;
     align-items: center;
-    background: url("../../../assets/images/bg-card-back.png") no-repeat center;
+    background: url("/src/assets/images/bg-card-back.png") no-repeat center;
     top: 45%;
     left: 55%;
     @include breakpoint(large) {
@@ -61,7 +63,7 @@ section:first-of-type {
   }
 
   & .front__card {
-    background: url("../../../assets/images/bg-card-front.png") no-repeat center;
+    background: url("/src/assets/images/bg-card-front.png") no-repeat center;
     top: 83%;
     left: 49%;
     text-transform: uppercase;
@@ -78,17 +80,17 @@ section:first-of-type {
 
     & p {
       font-size: 1.05rem;
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
       padding: 2.5rem 0 0 0;
       @include breakpoint(medium) {
         padding-top: 3rem;
         font-size: 1.1rem;
-        letter-spacing: .22rem;
+        letter-spacing: 0.22rem;
       }
       @include breakpoint(large) {
         padding-top: 4rem;
         font-size: 1.5rem;
-        letter-spacing: .3rem;
+        letter-spacing: 0.3rem;
       }
     }
 
@@ -99,13 +101,13 @@ section:first-of-type {
       font-size: 0.8rem;
       justify-content: space-between;
       @include breakpoint(medium) {
-        margin-top: .9rem;
-        font-size: .9rem;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
       }
     }
 
     & h2 {
-      font-size: .9rem;
+      font-size: 0.9rem;
       @include breakpoint(medium) {
         font-size: 1rem;
       }
