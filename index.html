@@ -23,13 +23,24 @@
       rel="stylesheet"
     />
     <style>
-      section:first-of-type .back__card {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        background: url("./src/assets/images/bg-card-back.png") no-repeat center;
-        top: 45%;
-        left: 55%;
+      section:first-of-type {
+        color: var(--neutral-100);
+        background: black url("./src/assets/images/bg-main-mobile.png")
+          no-repeat center;
+        background-size: cover;
+        position: relative;
+        width: 100vw;
+        height: 15rem;
+        padding-top: 20px;
+      }
+      @media (min-width: 64rem) {
+        section:first-of-type {
+          background: black url("./src/assets/images/bg-main-desktop.png")
+            no-repeat center;
+          background-size: cover;
+          width: 40vw;
+          min-height: 100vh;
+        }
       }
     </style>
   </head>
