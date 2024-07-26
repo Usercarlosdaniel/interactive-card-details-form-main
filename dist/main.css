@@ -140,8 +140,8 @@ section:first-of-type .back__card {
 }
 @media (min-width: 64rem) {
   section:first-of-type .back__card {
-    top: 60%;
-    left: 100%;
+    top: 60% !important;
+    left: 100% !important;
   }
 }
 section:first-of-type .back__card span {
