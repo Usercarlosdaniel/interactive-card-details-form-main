@@ -1,0 +1,23 @@
+.confirm__btn {
+  margin-top: 1rem;
+  appearance: none;
+  cursor: pointer;
+  color: var(--neutral-100);
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--neutral-700);
+  max-width: 94%;
+}
+
+.completed__btn {
+  margin-top: 1rem;
+  appearance: none;
+  cursor: pointer;
+  color: var(--neutral-100);
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--neutral-700);
+  min-width: 94%;
+}

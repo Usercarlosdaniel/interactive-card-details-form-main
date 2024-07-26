@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "scripts": {
+    "watch": "sass --no-source-map --watch src/app/sass:dist"
+  },
+  "dependencies": {}
+}

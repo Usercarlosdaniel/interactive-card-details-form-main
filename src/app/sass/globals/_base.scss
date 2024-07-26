@@ -1,0 +1,13 @@
+@use "../util/breakpoints" as *;
+
+main {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 100%;
+  font-weight: 500;
+  background: var(--neutral-100);
+  width: 100%;
+  min-height: 100vh;
+  @include breakpoint(large) {
+    display: flex;
+  }
+}

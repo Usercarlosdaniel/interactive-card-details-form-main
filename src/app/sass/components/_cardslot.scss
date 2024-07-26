@@ -1,0 +1,114 @@
+@use "../util/breakpoints" as *;
+// first section
+section:first-of-type {
+  color: var(--neutral-100);
+  background: url("/src/assets/images/bg-main-mobile.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  width: 100vw;
+  height: 15rem;
+  padding-top: 20px;
+
+  @include breakpoint(large) {
+    background: url(/src/assets/images/bg-main-desktop.png) no-repeat center;
+    background-size: cover;
+    width: 40vw;
+    min-height: 100vh;
+  }
+
+  > * {
+    //style for all cards
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    width: 18rem;
+    height: 10rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+
+    @include breakpoint(medium) {
+      width: 19rem;
+      height: 11rem;
+    }
+    @include breakpoint(large) {
+      width: 25rem;
+      height: 14rem;
+    }
+  }
+
+  & .back__card {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: url("/src/assets/images/bg-card-back.png") no-repeat center;
+    top: 45%;
+    left: 55%;
+    @include breakpoint(large) {
+      top: 60%;
+      left: 100%;
+    }
+    & span {
+      font-size: 0.8rem;
+      padding-bottom: 0.2rem;
+      @include breakpoint(medium) {
+        font-size: 1rem;
+      }
+      @include breakpoint(large) {
+        font-size: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  & .front__card {
+    background: url("/src/assets/images/bg-card-front.png") no-repeat center;
+    top: 83%;
+    left: 49%;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      top: 33%;
+      left: 80%;
+    }
+
+    & div img {
+      @include breakpoint(large) {
+        width: 90px;
+      }
+    }
+
+    & p {
+      font-size: 1.05rem;
+      letter-spacing: .2rem;
+      padding: 2.5rem 0 0 0;
+      @include breakpoint(medium) {
+        padding-top: 3rem;
+        font-size: 1.1rem;
+        letter-spacing: .22rem;
+      }
+      @include breakpoint(large) {
+        padding-top: 4rem;
+        font-size: 1.5rem;
+        letter-spacing: .3rem;
+      }
+    }
+
+    & div:last-of-type {
+      display: flex;
+      align-items: center;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      justify-content: space-between;
+      @include breakpoint(medium) {
+        margin-top: .9rem;
+        font-size: .9rem;
+      }
+    }
+
+    & h2 {
+      font-size: .9rem;
+      @include breakpoint(medium) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

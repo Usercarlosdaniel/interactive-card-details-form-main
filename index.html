@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" type="text/css" href="dist/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="back__card">
+          <span id="cvc-display">000</span>
+        </div>
+        <div class="front__card">
+          <div>
+            <img src="/src/assets/images/svg/card-logo.svg" width="70px" />
+          </div>
+          <p id="card-number-display">0000 0000 0000 0000</p>
+          <div>
+            <h2 id="card-name-display">Jane Appleseed</h2>
+            <span id="month-year-display">00/00</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <form id="form">
+          <div>
+            <label for="name">Cardholder Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="e.g. Jane Appleseed"
+              class="required"
+              oninput="nameValidate()"
+            />
+            <span class="false">Can't be blank</span>
+          </div>
+          <div>
+            <label for="number">Card Number</label>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              name="number"
+              id="number"
+              class="required"
+              oninput="numberValidate()"
+              maxlength="19"
+            />
+            <span class="false">Wrong format, numbers only</span>
+          </div>
+          <div>
+            <label for="month">Exp. Date (MM/YY)</label>
+            <label for="cvc">CVC</label>
+          </div>
+          <div class="inputs">
+            <div>
+              <div class="input__flex">
+                <input
+                  type="text"
+                  placeholder="MM"
+                  name="month"
+                  id="month"
+                  class="input__month required"
+                  maxlength="2"
+                  oninput="monthValidate()"
+                />
+                <input
+                  type="text"
+                  placeholder="YY"
+                  id="year"
+                  class="input__years required"
+                  maxlength="2"
+                  oninput="yearValidate()"
+                />
+              </div>
+              <span class="false">Can't be blank</span>
+              <span class="false"></span>
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="e.g. 123"
+                name="cvc"
+                id="cvc"
+                class="input__cvc required"
+                maxlength="3"
+                oninput="cvcValidate()"
+              />
+              <span class="false">Can't be blank</span>
+            </div>
+          </div>
+          <button class="confirm__btn" type="submit">Confirm</button>
+        </form>
+        <!-- Completed state start -->
+        <div class="completed hidden">
+          <img
+            src="/src/assets/images/svg/icon-complete.svg"
+            alt="icon completed"
+          />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="completed__btn">Continue</button>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="/src/app/js/script.js"></script>
+</html>
