@@ -78,11 +78,9 @@ function nameValidate() {
 }
 
 function numberValidate() {
-  // Remove all non-digit characters from the card number
-  const cleanedCardNumber = numberInput.value.replace(/\D/g, "");
 
   // Test the cleaned card number against the pattern
-  if (pattern.test(cleanedCardNumber)) {
+  if (pattern.test(numberInput.value)) {
     removeError(1);
     updateCardDisplay();
     return true;
